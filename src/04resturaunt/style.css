@@ -1,0 +1,128 @@
+body
+{
+    font-size: 16px;
+    color: #fff;
+    background-color: #61122f;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#header-nav
+{
+    background-color: #f6b319;
+    border-radius: 0;
+    border: 0;
+}
+
+#logo-img
+{
+    background-image: url("images/restaurant-logo_large.png");
+    width: 150px;
+    height: 150px;
+    margin: 10px 0 10px 10px;
+}
+
+.navbar-brand h1 /*restaurant name*/
+{
+    font-family: Lora, serif;
+    color: #557c3e;
+    font-size: 150%;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    clear: right;
+}
+.navbar-brand a:hover, .navbar-brand a:focus
+{
+    text-decoration: none;
+}
+
+.navbar-brand p
+{
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 70%;
+    margin-top: 15px;
+}
+
+.navbar-brand p span { /* Star-K */
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+}
+
+#star-img
+{
+    float: left;
+    margin-left: 10px;
+}
+
+#deliver-statement
+{
+    margin-left: 5px;
+    text-shadow: 1px 1px 1px #557c3e;
+    border-color: #557c3e;
+    border-style: solid;
+    border-radius: 5px;
+    border-top-width: 2px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-right-width: 2px;
+
+    padding: 0 2px 0 2px;
+}
+ .jumbotron
+{
+    /*background-image: url("/images/jumbotron_1200.jpg");*/
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+    max-width: 100%;
+     height: 100%;
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding: 0;
+     margin-top: 20px;
+}
+
+#home-tiles .card
+{
+    background-color: black;
+    color: white;
+}
+
+#home-tiles h5
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#google-map-iframe::before
+{
+    padding-top: 69.44%;
+}
+
+#main-footer
+{
+    margin-top: 3%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #222;
+    border-radius: 2px;
+}
+
+#main-footer section
+{
+    margin-top: 15px;
+}
+
+#copyright
+{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+

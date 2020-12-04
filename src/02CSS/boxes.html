@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BoxModel</title>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+        }
+
+        .box
+        {
+            background-color: blue;
+            padding: 10px;
+            border: 5px solid black;
+            width: 300px;
+            height: 50px;
+            overflow: scroll;
+        }
+        .colorGreenBackgroundColor
+        {
+            background-color: green;
+
+        }
+        h1
+        {
+            margin-bottom: 30px;
+        }
+
+        .flexbox
+        {
+            display: flex;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>lorem ipson dollar</h1>
+    <div class="flexbox">
+        <div class ="box">
+                sizing, so specifying the size of the box. And we talked about
+            box sizing being the border, box meaning that if I specified some
+            width or some height, it will include, always include from the edge
+            of the border to the other edge of the border. And we'll also show that
+            as we change the width of our element, since the content inside the box
+            shifted, the height of the box shifted as well. So let's go ahead and add
+            some more content into our box, and then we'll us the Emmet plugin, E-M-M-E-
+        </div>
+        <div class ="box colorGreenBackgroundColor">
+                funny lorem ipsom dollar go brrrrrrrrrrrrrrrrrrrrrrrrrrr
+            rrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+        </div>
+    </div>
+
+</body>
+</html>

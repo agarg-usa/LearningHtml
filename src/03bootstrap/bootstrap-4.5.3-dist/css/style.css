@@ -1,0 +1,11 @@
+.card
+{
+    background-color: #b3d7ff;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.margin
+{
+    margin-bottom: 30px;
+}
