@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>default values</title>
+    <script>
+        function orderChickenWith(sideDish) {
+            //you can make an if statement to see if sidedisjh ==undefined or all the other things
+            //but there is an easier way:
+            sideDish = sideDish || "noodles"; // a || b, it will return the first one it see's that is
+            //true. So if a is false and b is true, it will return b.  If a is true no matter what b
+            //is it will return true. if both are false then sideDish will be undefined, but since
+            //noodles isnt an empty string atleast one of the vars a/b will be true
+            console.log("Chicken with " + sideDish);
+        }
+
+        orderChickenWith("noodles"); //
+        orderChickenWith(); //passes undefined. output looks weird
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<button>cringe</button>
+<div></div>
+<script>
+
+    class ajaxRequest
+    {
+
+        constructor() {
+        }
+
+        getRequestObject() {
+            return new XMLHttpRequest();
+        }
+
+        handleRequest(request, responseHandler) {
+            if (request.readyState === 4 && request.status === 200)
+            {
+                responseHandler(request);
+
+            }
+        }
+
+        sendGetRequest(requestURL, responseHandler)
+        {
+            var request = this.getRequestObject();
+            request.onreadystatechange = () => this.handleRequest(request, responseHandler);
+            request.open("GET", requestURL, true);
+            request.send("body");
+
+        }
+    }
+
+    document.querySelector("button").addEventListener("click",
+        function () {
+            const myAjax = new ajaxRequest();
+
+            myAjax.sendGetRequest("https://randomuser.me/api/", (request) =>
+            {
+                var person = JSON.parse(request.responseText);
+                console.log(person);
+                document.querySelector("div").innerHTML =
+                    "Hi my name is " + person.results[0].name.first + " " + person.results[0].name.last;
+            });
+
+        }
+    );
+
+    // var asdf = 4;
+    //
+    // class epic
+    // {
+    //     constructor()
+    //     {
+    //         this.ra = 1234;
+    //     }
+    //
+    //      xyz ()
+    //      {
+    //         (() => {
+    //             console.log(window.asdf);
+    //             console.log(this.ra);
+    //             console.log(this);
+    //             (() =>
+    //             {
+    //                 console.log(asdf);
+    //                 console.log(this)
+    //             })();
+    //
+    //         })();
+    //      }
+    // }
+    //
+    // (new epic()).xyz();
+    //
+    // document.querySelector("div").innerHTML = asdf;
+</script>
+</body>
+</html>

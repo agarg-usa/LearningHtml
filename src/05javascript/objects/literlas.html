@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIterlas </title>
+
+    <script>
+        var literalCircle =
+            {
+                radius: 10,
+
+                getArea: function() {
+                    console.log(this);
+                    var self = this;
+
+                    var increaseRadius = function () {
+                        //this.radius = 20;  //an inner function inside another function, this is a global var
+                        self.radius = 20;
+                    };
+
+                    increaseRadius();
+
+                    return Math.PI * Math.pow(this.radius, 2);
+                }
+            };
+
+        console.log(literalCircle.getArea())
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

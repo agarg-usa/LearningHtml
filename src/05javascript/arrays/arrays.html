@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var array = new Array();
+        array[0] = "epic";
+        array[1] = 2;
+        array[2] = function (name = "john") {
+            console.log("hello " + name);
+        };
+
+
+        array[3] = {
+            firstName : "david",
+            lastName : "smith",
+            fullName: function()
+            {
+                console.log(this);
+                let instance = this;
+
+                asdf = function()
+                {
+                    console.log(instance);
+                };
+                asdf();
+
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        array[2](array[3].fullName());
+
+        var names = ["john", "johonohon", "johonogir"];
+        for (var i = 0; i < names.length; i++)
+        {
+            array[2](names[i]);
+        }
+
+        var names2 = ["john", "johonohon", "johonogir"];
+        var myObj = {
+            name: "Yaakov",
+            course: "HTML/CSS/JS",
+            platform: "Coursera"
+        };
+
+        for (var prop in myObj)
+        {
+            console.log(prop + " : " + myObj[prop]);
+        }
+
+        names2.greeting = "hi";
+        for (var name in names2)
+        {
+            console.log("hello " + names2[name]); //this will loop over greeting because that is now a property of the array
+        }
+        for (var i = 0; i < names.length; i++)
+        {
+            array[2](names2[i]);
+        }
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

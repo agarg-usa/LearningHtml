@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functional Programming</title>
+    <script>
+        function multiply(x,y) {
+            return x*y;
+        }
+        multiply.version = "v. epic";
+        console.log(multiply.toString()); //you dont need toString, though it will change what the output is
+
+        //Function factory
+
+        function makeMultiplier(multiplier)
+        {
+            return function (x) {
+                return multiplier * x;
+            };
+        }
+
+        var multiplyBy3 = makeMultiplier(3);
+        console.log(multiplyBy3(10));
+
+        //passing fuction as arguments
+        function doOperationOn(x, operation) {
+            return operation(x);
+        }
+
+        console.log(doOperationOn(5, multiplyBy3));
+        //console.log(doOperationOn(5, 3)); causes a TypeError
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

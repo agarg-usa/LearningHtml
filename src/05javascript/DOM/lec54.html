@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",
+        function(event)
+            {
+                console.log(event);
+                sayHello = () =>
+                {
+                    document.getElementById("content").innerHTML = "<b>Hello " +
+                        document.getElementById("name").value + "</b>";
+                };
+                document.querySelector("button").addEventListener("click", sayHello);
+
+                document.querySelector("body").addEventListener("mousemove", function (event) {
+                    if (event.shiftKey)
+                    {
+                        console.log("x: " + event.clientX + ", y: " + event.clientY);
+                    }
+                });
+            }
+        );
+
+
+
+
+    </script>
+</head>
+<body>
+    <p>
+        Say hello to
+        <input id="name" type="text">
+        <button onclick= "sayHello()">Say it!</button>
+    </p>
+
+    <div id="content"></div>
+
+
+</body>
+</html>

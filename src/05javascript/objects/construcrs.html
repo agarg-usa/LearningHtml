@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Functions </title>
+    <script>
+        /*
+        function test() {
+            console.log(this)
+            console.log("Hello Coursera!")
+            this.myName =  "epic";
+        }
+        test();
+        console.log(this.myName);
+
+        //Function constructor, need new keyword to create, and will force there
+        //to be a new object of its type.
+        function Circle(radius) {
+            console.log(this); //return object of type circle
+            this.radius = radius;
+        }
+
+        //prototype s basically static function
+        Circle.prototype.getArea = function () {
+            return Math.PI * Math.pow(this.radius, 2);
+        };
+
+        var myCircle = new Circle(10);
+        console.log(myCircle); //return object of type circle
+        console.log(Circle); //returns the window object
+        */
+        function Cringe()
+        {
+            console.log(this);
+            function print()
+            {
+                console.log(this);
+                function print2()
+                {
+                    console.log(this);
+                }
+                print2();
+            }
+            print();
+        }
+
+        console.log(new Cringe());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

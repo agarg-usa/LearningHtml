@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Epic</title>
+    <script>
+        var string = "Hello";
+        string += " World";
+        console.log(string + "!");
+
+        console.log((5+4) / 3);
+        console.log(undefined / 3); // will return NaN which is not a number
+
+        var x = 4, y = 4;
+        if (x == y)
+        {
+            console.log("x and y are both 4 and numbers");
+        }
+
+        x = "4";
+        if (x == y) //javascript will try to make them something where they can both be compared despite
+                    //one being a number and the other being a String (type coherison)
+        {
+            console.log("x='4' and is equal to y which is equal to 4, despite being different types.")
+        }
+
+        if (x === y)
+        {
+            console.log("Strict: x='4' is equal to y=4");
+        }
+        else
+        {
+            console.log("Strict: x='4' is not equal to y=4 ")
+        }
+
+        //these are all considered false
+        if (false || null || undefined || "" || 0 || NaN)
+        {
+            console.log("This line will never execute");
+        }
+
+        console.log(Boolean("epic")); //will return a boolean saying if this string is considered true or false
+
+        if (true && "hello" && 1 && -1 && "false")
+        {
+            console.log("All true");
+        }
+
+        function a() {
+            return //javascript will automatically add a semicolon here, so when you call a() it will just
+                    // return undefined because you return nothing
+            {
+              name : "Epic"
+            };
+        }
+
+        function b() {
+            return{
+                name: "epic" //will return an object with a var name with contents epic
+            };
+        }
+
+        console.log(a());
+        console.log(b());
+
+        var sum = 0;
+        for (var i = 0; i < 10; i++)
+        {
+            sum += i;
+        }
+        console.log("the sum from 0 to 9 = " + sum);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
